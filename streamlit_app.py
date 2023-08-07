@@ -4,7 +4,6 @@ import math
 import pandas as pd
 import streamlit as st
 
-st.write('Hello world!')
 
 """
 # Welcome to Streamlit!
