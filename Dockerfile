@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 
-COPY $HOME/code/titanic-webapp/streamlit_app.py .
+COPY streamlit_app.py .
 
 RUN pip3 install -r requirements.txt
 
