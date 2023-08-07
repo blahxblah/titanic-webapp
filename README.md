@@ -33,5 +33,18 @@ $ pipenv install streamlit
 ## RUN
 - streamlit run app.py
 
+## DEPLOY
+```
+$ docker build -t streamlit
+$ docker images streamlit
+REPOSITORY   TAG       IMAGE ID       CREATED          SIZE
+streamlit    latest    5428e5a1de60   56 minutes ago   1.01GB
+
+$ docker run --name streamlit  -p 8501:8501 streamlit
+$ sudo docker ps
+CONTAINER ID   IMAGE                   COMMAND                  CREATED          STATUS                           PORTS                           NAMES
+d7f2567f7117   streamlit               "streamlit run strea…"   49 minutes ago   Up 1 second (health: starting)   0.0.0.0:8501->8501/tcp          streamlit
+```
+
 ## REF
 - https://30days.streamlit.app/?challenge=Day2
