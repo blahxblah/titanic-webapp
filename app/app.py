@@ -44,12 +44,12 @@ data = {"Age": Age,
 dataJSON = json.dumps(data) # create json object from dict
 
 # preprocess data by making post request to the API
-r = requests.post(url="http://localhost:8000/preprocess/", data=dataJSON)
+r = requests.post(url="https://titanic-ml-api-kjh.fly.prd/preprocess/", data=dataJSON)
 preprocessedData = r.json()
 preprocessedJSON = json.dumps(preprocessedData)
 
 # make prediction by making post request to the API
-pred = requests.post(url="http://localhost:8000/predict/", data=preprocessedJSON)
+pred = requests.post(url="https://titanic-ml-api-kjh.fly.prd/predict/", data=preprocessedJSON)
 # display survival probability
 st.image("./static/titanic.jpg", use_column_width=True)
 st.write("Your chance of Survival based on the information provided is: {}%.".format(pred.json()))
