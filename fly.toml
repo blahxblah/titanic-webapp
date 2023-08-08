@@ -3,7 +3,7 @@
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "titanic_webapp-kjh"
+app = "titanic-webapp-kjh"
 primary_region = "nrt"
 
 [build]
